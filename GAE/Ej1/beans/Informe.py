@@ -1,6 +1,6 @@
 __author__ = 'victor'
 
-from GAE.Ej1.utils import Logger
+from utils import Logger
 
 class Informe():
 
@@ -52,8 +52,8 @@ def getDay(time):
 def informeToString(informe):
     """Metodo toString del objeto Informe"""
 
-    Logger.log("Dia: " + str(getDay(informe.tiempo)))
-    Logger.log(str(informe.tiempo) + " H - " + str(informe.nombre) + " " + str(informe.recompensa) + "pv")
+    print("Dia: " + str(getDay(informe.tiempo)))
+    print(str(24 - informe.tiempo%24) + " H - " + str(informe.nombre) + " " + str(informe.recompensa) + "pv")
 
 def nuevo_informe(tiempo, localizacion, nombre, recompensa):
     """Metodo que genera un nuevo objeto 'Informe' con la informacion pasada como parametro"""

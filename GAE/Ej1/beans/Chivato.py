@@ -1,6 +1,6 @@
 __author__ = 'victor'
 
-from GAE.Ej1.utils import ClassUtils
+from utils import ClassUtils
 
 import random
 
@@ -14,13 +14,11 @@ class Chivato:
     localizacion = [0, 0]
     list_maleantes = []
 
-
-    def inicialice(self, maleantes=[], i=0):
+    def __init__(self, maleantes=[], i=0):
         self.nombre = "Chivato" + str(i)
         self.isMaleante = randomBoolean()
         self.localizacion = [random.randint(0,20), random.randint(0,20)]
         self.list_maleantes = getMaleantes(maleantes)
-
 
 
 
@@ -34,7 +32,7 @@ def randomChivatos(limit, maleantes):
     i = 0;
     while(i < num_chivatos):
         c = Chivato()
-        c.inicialice(maleantes, i)
+        c.__init__(maleantes, i)
         lista_chivatos.append(c)
         i = i + 1
     return lista_chivatos

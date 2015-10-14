@@ -3,7 +3,7 @@ __author__ = 'victor'
 #Fichero de texto donde guardar logs
 f = None
 
-debug = True
+debug = False
 info = False
 textTile = False
 
